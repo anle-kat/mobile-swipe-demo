@@ -19,6 +19,10 @@ import org.openqa.selenium.Keys as Keys
 
 Mobile.startApplication('/Users/anle/Projects/TestCloud/Testing/apps/mb/demo.apk', true)
 
+Mobile.delay(5)
+
+Mobile.takeScreenshot()
+
 def selectedObj = findTestObject('Object Repository/android.widget.FrameLayout')
 
 def top = Mobile.getElementTopPosition(selectedObj, 0) 
@@ -30,6 +34,12 @@ def width = Mobile.getElementWidth(selectedObj, 0)
 def height = Mobile.getElementHeight(selectedObj, 0)
 
 Mobile.swipe(left - 5, top, 10, top)
+
+Mobile.delay(5)
+
+Mobile.takeScreenshot()
+
+Mobile.delay(5)
 
 Mobile.closeApplication()
 
